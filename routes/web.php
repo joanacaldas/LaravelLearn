@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
     ]);
 
     //rota para os sócios de um utilizador
-    Route::get('socios_user/{id}',[SocioController::class,'socios_user'])->name('socio.user');
+    // Route::get('socios_user/{id}',[SocioController::class,'socios_user'])->name('socio.user');
     Route::put('socios_update/{id}', [SocioController::class,'update'])->name('socio.update');
     Route::get('socios_delete/{id}', [SocioController::class, 'delete'])->name('socio.delete');
 
