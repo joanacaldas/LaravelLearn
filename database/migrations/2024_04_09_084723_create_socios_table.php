@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('socios', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('user_id') -> constrained();
+            // vai buscar a chave primária a outra tabela, nesta tabela será chave estrangeira com o nome user_id - o que faz a ligação é o 'constrained'
+            $table->string('nome');
+            $table->string('cc');
+            $table->string('morada');
+            $table->string('codigoPostal');
+            $table->string('localidade');
+            $table->string('email');
+            $table->string('telefone');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('socios');
+    }
+};
