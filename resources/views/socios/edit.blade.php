@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Edição do sócio {{$socio->name}}
-
+                <div class="card-header">Edição do sócio {{$socio->nome}}
+               
                 </div>
 
                 <div class="card-body">
@@ -19,20 +19,26 @@
 
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" class="form-control" id="nome" value="{{$socio->nome}}" placeholder="Enter name">
-                            <label for="nome">Cartão de Cidadão</label>
-                            <input type="text" class="form-control" id="nome" value="{{$socio->cc}}" placeholder="Cartão de Cidadão">
-                            <label for="nome">Morada</label>
-                            <input type="text" class="form-control" id="nome" value="{{$socio->morada}}" placeholder="Morada">
-                            <label for="nome">Codigo Postal</label>
-                            <input type="text" class="form-control" id="nome" value="{{$socio->codigoPostal}}" placeholder="Codigo Postal">
-                            <label for="nome">Localidade</label>
-                            <input type="text" class="form-control" id="nome" value="{{$socio->codigoPostal}}" placeholder="Localidade">
-                            <label for="nome">Telefone</label>
-                            <input type="text" class="form-control" id="nome" value="{{$socio->telefone}}" placeholder="Telefone">
+                            <input type="text" class="form-control" id="nome" name="nome" value="{{$socio->nome}}" required>
+                            
+                            <label for="cc">Cartão de Cidadão</label>
+                            <input type="text" class="form-control" id="cc"  name="cc" value="{{$socio->cc}}" required>
+                            
+                            <label for="morada">Morada</label>
+                            <input type="text" class="form-control" id="morada" name="morada" value="{{$socio->morada}}" required>
+                            
+                            <label for="codigoPostal">Codigo Postal</label>
+                            <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" value="{{$socio->codigoPostal}}" required>
+                            
+                            <label for="localidade">Localidade</label>
+                            <input type="text" class="form-control" id="localidade" name="localidade" value="{{$socio->localidade}}" required>
+                           
+                            <label for="telefone">Telefone</label>
+                            <input type="text" class="form-control" id="telefone" name="telefone" value="{{$socio->telefone}}" required>
+                            
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" value="{{$socio->email}}" aria-describedby="emailHelp" placeholder="Enter email">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <input type="email" class="form-control" id="email" name="email" value="{{$socio->email}}" required>
+                            
                         </div>
             
 
