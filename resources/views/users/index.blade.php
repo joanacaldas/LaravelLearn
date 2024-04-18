@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="container" >
+    <div class="row justify-content-center" >
+        <div class="col-md-8" >
             <div class="card">
 
                 <div class="card-header" style="background-color: #add8e6;">Lista de utilizadores </div>

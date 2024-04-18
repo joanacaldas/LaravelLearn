@@ -15,24 +15,28 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <style>
+    body {
+  background-color: #d9c09e; 
+}
+</style>
 </head>
 <body >
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 
-            <a class="navbar-brand" href="{{route('home')}}">
-                    Laravel
-                </a>
-                <a class="navbar-brand" href="{{route('user.index')}}">
-                    Utilizadores
-                </a>
-                <a class="navbar-brand" href="{{route('socio.create')}}">
-                    Socios
-                </a>
-                <a class="navbar-brand" href="{{route('editora.create')}}">
-                    Editoras
-                </a>
+            <div class="btn-group" role="group" aria-label="Vertical button group">
+  <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Menu
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="{{route('home')}}">Home</a>
+    <a class="dropdown-item" href="{{route('user.index')}}">Utilizadores</a>
+    <a class="dropdown-item" href="{{route('socio.create')}}">Socios</a>
+    <a class="dropdown-item" href="{{route('editora.create')}}">Editoras</a>
+  </div>
+</div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
