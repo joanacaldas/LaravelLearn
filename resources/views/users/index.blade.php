@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
 
-                <div class="card-header">Lista de utilizadores</div>
+                <div class="card-header" style="background-color: #add8e6;">Lista de utilizadores</div>
 
                 <div class="card-body">
                     <!-- <p>Bem vindo! {{Auth::user()->name}}</p> -->
