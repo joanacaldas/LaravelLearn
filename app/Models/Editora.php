@@ -13,6 +13,7 @@ class Editora extends Model
         'morada',
         'contribuinte',
         'telefone',
+        'nome',
 
     ];
 }

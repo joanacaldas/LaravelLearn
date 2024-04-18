@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form action="" 
+                    <form action="{{route('editora.update', $editora->id)}}" 
                     method="post">
                         @csrf
                         <!-- segurança para utilizar forms -->

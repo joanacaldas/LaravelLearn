@@ -40,9 +40,11 @@ Route::middleware('auth')->group(function () {
     ]);
     //rota para a pagina de confirmção de eliminação de sócios
     Route:: get ('confirma_delete/{id}',[SocioController::class,'confirma_delete'])->name('socio.confirma_delete');
+   
+    //rota para a pagina de confirmção de eliminação das editoras
+    Route:: get ('confirma_delete_editora/{id}',[EditoraController::class,'confirma_delete_editora'])->name('editora.confirma_delete_editora');
 
-
-    //rota para os sócios de um utilizador
+        //rota para os sócios de um utilizador
     Route::get('socios_user/{id}',[SocioController::class,'socios_user'])->name('socio.user');
     
     

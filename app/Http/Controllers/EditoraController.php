@@ -12,7 +12,7 @@ class EditoraController extends Controller
      */
     public function index()
     {
-        // lista todas as editoras 
+        return view('editoras.index',['editoras'=>Editora::orderby('nome')->paginate(20)]);
     }
 
     /**
@@ -20,7 +20,7 @@ class EditoraController extends Controller
      */
     public function create()
     {
-        // serve para chamar o formulario de inserção
+        return view ('editoras.create');
     }
 
     /**
@@ -28,8 +28,19 @@ class EditoraController extends Controller
      */
     public function store(Request $request)
     {
+         //Model socio
+         $editora =new Editora();
         // serve para gravar o formulario de inserção do create
         // o request encaminha para a base de dados
+        $editora-> id       =$request-> id;
+        $editora-> nome             =$request-> nome;
+        $editora-> morada           =$request-> morada;
+        $editora-> telefone          =$request-> telefone;
+        $editora-> contribuinte     =$request-> contribuinte ;
+       
+        $editora->save();
+
+        return redirect()->route('editora.create')-> with ('msg','O seu registo foi gravado com sucesso.');
     }
 
     /**
@@ -39,6 +50,7 @@ class EditoraController extends Controller
     {
         // mostra uma ficha individual
         // $editora só passa o parametro
+        return view('editoras.show', ['editora'=>$editora]);
     }
 
     /**
@@ -48,6 +60,7 @@ class EditoraController extends Controller
     {
         // serve para chamar o formulario de edição
         // $editora só passa o parametro
+        return view('editoras.edit', ['editora' => $editora]);
     }
 
     /**
@@ -57,6 +70,8 @@ class EditoraController extends Controller
     {
         // serve para gravar o formulario de edição do edit
         //  o request encaminha para a base de dados e o $editora só passa o parametro
+        Editora::findOrFail($editora->id) -> update($request->all());
+        return redirect()->route('editora.show', $editora->id);
     }
 
     /**
@@ -66,5 +81,11 @@ class EditoraController extends Controller
     {
         // serve para apagar um registo
        // $editora só passa o parametro
+       Editora::findOrFail ($editora->id)->delete();
+      return redirect()->route('editora.index');
+    }
+    public function confirma_delete_editora (Editora $id)
+    {
+        return view('editoras.confirma_delete_editora', ['id' => $id]);
     }
 }
