@@ -9,7 +9,7 @@
 
                 </div>
 
-                <div class="card-body">
+                <div class="card-body" style="background-color: #add8e6;">
                     <form action="{{route('user.update',$user->id)}}" method="post">
                         @csrf
                         <!-- segurança para utilizar forms -->
@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" value="{{$user->password}}">
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" value="{{$user->password}}" name="password">
                             <select name="level" id="">
                                 <option value="{{$user->level}}" selected disabled>{{$user->level}}</option>
                                 

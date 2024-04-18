@@ -93,11 +93,17 @@ class SocioController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function delete($id)
+    public function destroy(Socio $socio)
     {
-        Socio::destroy($id);
+      //return 'Vai eliminar o sócio' . $socio->nome;
+
+      Socio::findOrFail ($socio->id)->delete();
       return redirect()->route('socio.index');
         
     }
-   
+
+    public function confirma_delete (Socio $id)
+    {
+        return view('socios.confirma_delete', ['id' => $id]);
+    }
 }

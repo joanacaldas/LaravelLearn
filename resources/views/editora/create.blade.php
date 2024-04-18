@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" style="background-color: #add8e6;">Criar Sócios</div>
+                <div class="card-header" style="background-color: #add8e6;">Criar Editoras</div>
                     
                         @if (session('msg'))
                         <p class="btn btn-info">
@@ -15,51 +15,35 @@
                             </p>
                         @endif
                            
-                        <p class="btn btn-outline-secondary"><a style= "text-decoration: none;" href="{{route('socio.index')}}">Listar todos os Sócios</a></p>
-                           
-
-                        <p class="btn btn-outline-secondary"><a style= "text-decoration: none;" href="{{route('socio.user', Auth::user()->id)}}" >Listar os meus Sócios</a></p>
+                        <p class="btn btn-outline-secondary"><a style= "text-decoration: none;" href="">Listar todas as Editoras</a></p>
+                       
 
                         
                 <div class="card-body">
-                  <form action="{{route('socio.store')}}" method="post">
+                  <form action="" method="post">
                   @csrf
                     <fieldset>
                         <h2> Preencha todos os campos </h2>
                         <div>
                        
-                            <input class="form-control mb-2" type= "hidden" name="user_id" value="{{Auth::user()->id}}" id="user_id">
+                            <input class="form-control mb-2" type= "hidden" name="editora_id" value="{{Auth::editora()->id}}" id="editora_id">
                         </div>
                         <div>
                             <label for="nome">Nome</label>
                             <input class="form-control mb-2" type= "text" name="nome" id="nome" required autofocus>
                         </div>
                         <div>
-                            <label for="cc">Cartão de Cidadão</label>
-                            <input  class="form-control mb-2"type= "text" name="cc" id="cc" required>
-                        </div>
-                        <div>
                             <label for="morada">Morada</label>
                             <input  class="form-control mb-2"type= "text" name="morada" id="morada" required>
                         </div>  
-                         
-                       
-                        <div>
-                            <label for="codigoPostal">Código Postal</label>
-                            <input  class="form-control mb-2"type= "text" name="codigoPostal" id="codigoPostal" required>
-                        </div> 
-                        <div>
-                            <label for="localidade">Localidade</label>
-                            <input  class="form-control mb-2"type= "text" name="localidade" id="localidade" required>
-                        </div> 
-                        <div>
-                            <label for="email">Email</label>
-                            <input  class="form-control mb-2"type= "email" name="email" id="email" required>
-                        </div> 
                         <div>
                             <label for="telefone">Telefone</label>
                             <input  class="form-control mb-2"type= "text" name="telefone" id="telefone" required>
                         </div>
+                        <div>
+                            <label for="contribuinte">Contribuinte</label>
+                            <input  class="form-control mb-2"type= "text" name="contribuinte" id="contribuinte" required>
+                        </div> 
                         <button type="submit" value="gravar"> Gravar</button>
                         <button type="reset" value="gravar"> Limpar</button>
                             

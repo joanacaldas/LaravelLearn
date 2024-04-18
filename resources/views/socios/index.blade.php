@@ -5,8 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Listagem de todos os Sócios</div>
-
+                <div class="card-header" style="background-color: #add8e6;">Listagem de todos os Sócios</div>
+                <div class="card-header" style="background-color: #e6bbad;">Sócios registados: {{count($socios)}}</div>
                 <div class="card-body">
                 <table class="table">
   <thead>
