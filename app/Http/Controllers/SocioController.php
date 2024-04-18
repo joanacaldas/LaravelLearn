@@ -72,22 +72,21 @@ class SocioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(Socio $socio)
     {
-        return view('socios.edit', ['socio' => Socio::find($id)]);
+        //return 'Edição do sócio'. $socio->nome;
+        return view('socios.edit', ['socio' => $socio]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update($id, $socio)
+    public function update(Request $request, Socio $socio)
     {
-
-        $socio->update($id->all());
-    return redirect()->route('socio.user')->with('update','Sócio has been updated!');
-
-        //Socio::findOrFail($id->id) -> update($id->all());
-        //return redirect()->route('socio.user',Auth::user()->id);
+      // return 'Edição do sócio'. $socio->nome;
+      
+    Socio::findOrFail($socio->id) -> update($request->all());
+        return redirect()->route('socio.show', $socio->id);
     }
    
 
@@ -97,7 +96,7 @@ class SocioController extends Controller
     public function delete($id)
     {
         Socio::destroy($id);
-      return redirect()->route('socio.user', Auth::user()->id);
+      return redirect()->route('socio.index');
         
     }
    

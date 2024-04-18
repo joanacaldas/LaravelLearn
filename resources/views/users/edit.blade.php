@@ -18,10 +18,10 @@
 
                         <div class="form-group">
                             <label for="nome">Nome</label>
-                            <input type="text" class="form-control" id="nome" value="{{$user->name}}" placeholder="Enter name">
+                            <input type="text" class="form-control" id="nome" name="nome" value="{{$user->name}}" placeholder="Enter name">
 
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" value="{{$user->email}}" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control" id="email" name="email" value="{{$user->email}}" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
