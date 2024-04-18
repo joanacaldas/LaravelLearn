@@ -15,18 +15,18 @@
                             </p>
                         @endif
                            
-                        <p class="btn btn-outline-secondary"><a style= "text-decoration: none;" href="">Listar todas as Editoras</a></p>
+                        <p class="btn btn-outline-secondary"><a style= "text-decoration: none;" href="{{route('editora.index')}}">Listar todas as Editoras</a></p>
                        
 
                         
                 <div class="card-body">
-                  <form action="" method="post">
+                  <form action="{{route('editora.store')}}" method="post">
                   @csrf
                     <fieldset>
                         <h2> Preencha todos os campos </h2>
                         <div>
                        
-                            <input class="form-control mb-2" type= "hidden" name="editora_id" value="{{Auth::editora()->id}}" id="editora_id">
+                            <input class="form-control mb-2" type= "hidden" name="editora_id"  id="editora_id">
                         </div>
                         <div>
                             <label for="nome">Nome</label>
