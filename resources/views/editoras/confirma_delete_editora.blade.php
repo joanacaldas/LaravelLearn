@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Confirmar eliminação da editora') }}</div>
+                <div class="card-header" style="background-color: #add8e6;">Confirmar eliminação da editora </div>
 
                 <div class="card-body">
                    <p>Confirma a eliminação da editora <strong>{{$id->nome}}</strong>?</p>

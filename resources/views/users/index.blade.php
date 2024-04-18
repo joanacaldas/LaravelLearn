@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
 
-                <div class="card-header" style="background-color: #add8e6;">Lista de utilizadores</div>
+                <div class="card-header" style="background-color: #add8e6;">Lista de utilizadores </div>
 
                 <div class="card-body">
                     <!-- <p>Bem vindo! {{Auth::user()->name}}</p> -->
@@ -24,8 +24,6 @@
                                 <th scope="col">Nome</th>
                                 <th scope="col">Mail</th>
                                 <th scope="col">Nível</th>
-                                <th scope="col" colspan="2" style="text-align:center">Ações </th>
-
                             </tr>
 
                         </thead>
