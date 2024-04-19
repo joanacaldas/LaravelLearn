@@ -19,8 +19,8 @@
                         <!-- para edição de dados -->
 
                         <div class="form-group">
-                            <label for="nome">Nome</label>
-                            <input type="text" class="form-control" id="nome" name="nome" value="{{$user->name}}" placeholder="Enter name">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{$user->name}}" placeholder="Enter name">
 
                             <label for="email">Email</label>
                             <input type="email" class="form-control" id="email" name="email" value="{{$user->email}}" aria-describedby="emailHelp" placeholder="Enter email">

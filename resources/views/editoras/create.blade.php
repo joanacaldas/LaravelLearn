@@ -7,13 +7,13 @@
             <div class="card">
                 <div class="card-header" style="background-color: #add8e6;">Criar Editoras</div>
                     
-                        @if (session('msg'))
-                        <p class="btn btn-info">
-                            {{
-                                session('msg')
-                            }}
-                            </p>
-                        @endif
+                <div x-data="{ showMessage: true }" x-show="showMessage" x-init="setTimeout(() => showMessage = false, 3000)">
+                    @if (session('msg'))
+                    <p class="btn btn-info">
+                        {{ session('msg') }}
+                    </p>
+                    @endif
+                </div>
                            
                         <p class="btn btn-outline-secondary"><a style= "text-decoration: none;" href="{{route('editora.index')}}">Listar todas as Editoras</a></p>
                        

@@ -1,5 +1,15 @@
 @extends('layouts.app')
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#search").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("tbody tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
 @section('content')
 <div class="container" >
     <div class="row justify-content-center" >
@@ -7,6 +17,7 @@
             <div class="card">
 
                 <div class="card-header" style="background-color: #add8e6;">Lista de utilizadores </div>
+                <input type="text" id="search" class="form-control" placeholder="Procurar...">
 
                 <div class="card-body">
                     <!-- <p>Bem vindo! {{Auth::user()->name}}</p> -->
