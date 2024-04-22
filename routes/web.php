@@ -48,7 +48,7 @@ Route::middleware('auth')->group(function () {
     Route::get('socios_user/{id}',[SocioController::class,'socios_user'])->name('socio.user');
     
     
-
+   
     
     
 });
