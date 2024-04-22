@@ -33,7 +33,7 @@
   <div class="dropdown-menu">
     <a class="dropdown-item" href="{{route('home')}}">Home</a>
     <a class="dropdown-item" href="{{route('user.index')}}">Utilizadores</a>
-    <a class="dropdown-item" href="{{route('socio.create')}}">Socios</a>
+    <a class="dropdown-item" href="{{route('socio.create')}}">Sócios</a>
     <a class="dropdown-item" href="{{route('editora.create')}}">Editoras</a>
   </div>
 </div>

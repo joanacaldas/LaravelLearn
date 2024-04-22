@@ -23,7 +23,7 @@ class SocioController extends Controller
 
      public function index()
     {
-      return view('socios.index',['socios'=>Socio::orderby('nome')->paginate(20)]);
+      return view('socios.index',['socios'=>Socio::orderby('nome')->paginate(10)]);
         
     }
 

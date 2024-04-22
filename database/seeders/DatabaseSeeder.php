@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use App\Models\Socio;
+use App\Models\Editora;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,14 +17,6 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(30)->create();
         Socio::factory(30)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
-        Socio::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+         Editora::factory(30)->create();
     }
 }

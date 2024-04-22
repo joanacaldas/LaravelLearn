@@ -12,7 +12,7 @@ class EditoraController extends Controller
      */
     public function index()
     {
-        return view('editoras.index',['editoras'=>Editora::orderby('nome')->paginate(20)]);
+        return view('editoras.index',['editoras'=>Editora::orderby('nome')->paginate(10)]);
     }
 
     /**

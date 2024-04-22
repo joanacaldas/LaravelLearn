@@ -13,20 +13,22 @@
 @section('content')
 <div class="container" >
     <div class="row justify-content-center" >
-        <div class="col-md-8" >
+        <div class="col-md-10" >
             <div class="card">
 
                 <div class="card-header" style="background-color: #add8e6;">Lista de utilizadores </div>
+                <div class="card-header" style="background-color: #add8e6;">
+    Utilizadores registados: {{ $users->total() }}
+</div>
                 <input type="text" id="search" class="form-control" placeholder="Procurar...">
 
                 <div class="card-body">
-                    <!-- <p>Bem vindo! {{Auth::user()->name}}</p> -->
+                 
                     <table class="table">
                         <thead>
                             <tr>
                                 <p>
-                                    <!-- <td style="text-align: center;">{{$users->links("pagination::bootstrap-4")}}</td> -->
-                                    <td style="text-align: center;">{{$users->links()}}</td>
+                                <td colspan="4" style="text-align: center; width: 100%;">{{$users->links()}}</td>
                                 </p>
                             </tr>
 
