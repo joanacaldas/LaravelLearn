@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(30)->create();
         Socio::factory(30)->create();
-         Editora::factory(30)->create();
+        Editora::factory(30)->create();
     }
 }

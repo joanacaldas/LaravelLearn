@@ -1,15 +1,25 @@
 <?php
 
 use App\Http\Controllers\EditoraController;
+use App\Http\Controllers\NavigationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SocioController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+
+
+// Route::get('/', function () {
+//     // return view('auth.login');
+//     return view('site.home');
+// });
+
+Route::get ('/', [NavigationController::class, 'home'])->name('site.home');
+Route::get ('/servicos', [NavigationController::class, 'servicos'])->name('site.servicos');
+Route::get ('/galeria', [NavigationController::class, 'galeria'])->name('site.galeria');
+Route::get ('/contacto', [NavigationController::class, 'contacto'])->name('site.contacto');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

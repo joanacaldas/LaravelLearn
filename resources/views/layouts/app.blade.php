@@ -19,6 +19,11 @@
     body {
   background-color: #d9c09e; 
 }
+
+ .small-text {
+    font-size: 0.8em;
+  }
+
 </style>
 </head>
 <body >
@@ -31,10 +36,19 @@
     Menu
   </button>
   <div class="dropdown-menu">
-    <a class="dropdown-item" href="{{route('home')}}">Home</a>
-    <a class="dropdown-item" href="{{route('user.index')}}">Utilizadores</a>
-    <a class="dropdown-item" href="{{route('socio.create')}}">Sócios</a>
-    <a class="dropdown-item" href="{{route('editora.create')}}">Editoras</a>
+    <a class="dropdown-item" href="{{route('home')}}"><strong> Home </strong></a>
+    <hr>
+    <a class="dropdown-item" href="{{route('user.index')}}"><strong> Utilizadores </strong></a>
+    <hr>
+    <button type="button" class="dropdown-item"><strong> Sócios </strong></button>
+    <a class="dropdown-item small-text" href="{{route('socio.create')}}">Criar sócios</a>
+    <a class="dropdown-item small-text" href="{{route('socio.index')}}">Listar sócios</a>
+    <a class="dropdown-item small-text" href="{{route('socio.user', Auth::user()->id)}}">Listar os meus sócios</a>
+    <hr>
+    <button type="button" class="dropdown-item"><strong> Editoras </strong></button>
+    <a class="dropdown-item small-text" href="{{route('editora.create')}}">Criar editoras</a>
+    <a class="dropdown-item small-text" href="{{route('editora.index')}}">Listar editoras</a>
+  
   </div>
 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

@@ -15,20 +15,11 @@
                     @endif
                 </div>
                            
-             <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a href="{{route('socio.index')}}" class="btn btn-outline-secondary btn-block" style="float:right">Listar todos os sócios</a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="{{route('socio.user', Auth::user()->id)}}" class="btn btn-outline-secondary btn-block" style="float:left">Listar os meus sócios</a>
-                    </div>
-                </div>
-            </div>
+            
                   <form action="{{route('socio.store')}}" method="post">
                   @csrf
                     <fieldset>
-                        <h2> Preencha todos os campos </h2>
+                        <h2 class="text-center mb-4"> Preencha todos os campos </h2>
                         <div>
                        
                             <input class="form-control mb-2" type= "hidden" name="user_id" value="{{Auth::user()->id}}" id="user_id">
