@@ -43,7 +43,7 @@
     <button type="button" class="dropdown-item"><strong> Sócios </strong></button>
     <a class="dropdown-item small-text" href="{{route('socio.create')}}">Criar sócios</a>
     <a class="dropdown-item small-text" href="{{route('socio.index')}}">Listar sócios</a>
-    <a class="dropdown-item small-text" href="{{route('socio.user', Auth::user()->id)}}">Listar os meus sócios</a>
+    {{-- <a class="dropdown-item small-text" href="{{route('socio.user', Auth::user()->id)}}">Listar os meus sócios</a> --}}
     <hr>
     <button type="button" class="dropdown-item"><strong> Editoras </strong></button>
     <a class="dropdown-item small-text" href="{{route('editora.create')}}">Criar editoras</a>
