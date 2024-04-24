@@ -8,6 +8,6 @@
     background-size: cover;
   }
 </style>
-   
+
 
 @endsection

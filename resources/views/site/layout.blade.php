@@ -11,6 +11,13 @@
 
 </head>
 <body>
+
+<style>
+    body {
+        background-color: #d9c09e;
+    }
+
+</style>
 {{-- navbar --}}
     @include('partials.navbar')
 
